@@ -1,0 +1,12 @@
+name: E2E
+
+on:
+  push:
+    branches: [main, "feature/**"]
+  pull_request:
+
+jobs:
+  chromium:
+    uses: ./.github/workflows/reusable-e2e.yml
+    with:
+      browser: chromium
